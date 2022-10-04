@@ -21,7 +21,7 @@ export function App() {
   };
 
     const countPositiveFeedbackPercentage = () => {
-    const total = this.countTotalFeedback();
+    const total = countTotalFeedback();
     const positivePercentage = total ? ((good / total) * 100).toFixed(0) : 0;
 
     return Number(positivePercentage);
