@@ -44,6 +44,7 @@ export function App() {
     }
   };
 
+  const totalFeedback = countTotalFeedback();
 
     return (
       <Wrapper>
@@ -56,14 +57,14 @@ export function App() {
         </Section>
         <Section title>
           <Title>Statistics</Title>
-          {!countTotalFeedback() ? (
+          {!totalFeedback ? (
             <Notification message="There is no feedback 👀" />
           ) : (
             <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
-              total={countTotalFeedback()}
+              total={totalFeedback}
               positivePercentage={countPositiveFeedbackPercentage()}
             />
           )}
